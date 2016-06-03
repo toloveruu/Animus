@@ -1582,6 +1582,16 @@
 		color: #00B890;
 		line-height: 1.25em;
 	}
+    
+    h1b {
+		font-weight: 400;
+		text-align: center;
+	}
+
+    p2 {
+        padding-left: 208px;
+        line-height: 500%
+    }
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 		color: inherit;
@@ -1649,7 +1659,7 @@
 	}
 
 	p, ul, ol, dl, table {
-		margin-bottom: 1em;
+		margin-bottom: 0.5em;
 	}
 
 	p {
@@ -2091,7 +2101,6 @@
 		.wrapper.style2 {
 			padding-top: 0;
 		}
-
 /* Header */
 
 	#header {
@@ -2480,7 +2489,7 @@
 				width: 6em;
 				height: 6em;
 				border-radius: 100%;
-				background-color: rgba(72, 57, 73, 0.5);
+				background-color: rgba(0, 20, 13, 0.6);
 				position: absolute;
 				top: 50%;
 				margin-top: -3em;
@@ -2503,7 +2512,7 @@
 			}
 
 			.carousel .forward:hover:before, .carousel .backward:hover:before {
-				background-color: rgba(239, 131, 118, 0.75);
+				background-color: rgba(61, 201, 179, 1);
 			}
 
 		.carousel .forward {
