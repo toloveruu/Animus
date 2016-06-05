@@ -1,0 +1,53 @@
+ <!DOCTYPE html> 
+2 <html lang="en" class="no-js"> 
+3 	<head> 
+4         <link rel="icon" href="http://puu.sh/pfddQ/8d65c8f190.png"> 
+5 		<meta charset="UTF-8" /> 
+6 		<meta http-equiv="X-UA-Compatible" content="IE=edge">  
+7 		<meta name="viewport" content="width=device-width, initial-scale=1">  
+8 		<title>xD</title> 
+9 		<meta name="description" content="Circular Progress Button with SVG" /> 
+10 		<meta name="keywords" content="circular progress button, progress indicator, svg line animation, radial progress, css" /> 
+11 		<meta name="author" content="Codrops" /> 
+12 		<link rel="shortcut icon" href="../favicon.ico"> 
+13 		<link rel="stylesheet" type="text/css" href="assets/css/normalize.css" /> 
+14 		<link rel="stylesheet" type="text/css" href="assets/css/demo.css" /> 
+15 		<link rel="stylesheet" type="text/css" href="assets/css/component.css" /> 
+16 		<script src="assets/js/modernizr.custom.js"></script> 
+17 	</head> 
+18 	<body> 
+19 		<div class="container"> 
+20 			<section> 
+21 				<h2>Careful where you click, lil' boi.</h2> 
+22 				<div class="box"> 
+23 					<!-- progress button --> 
+24 					<div class="progress-button"> 
+25 						<a href="gaybeast.com"><button><span>Download</span></button></a> 
+26 						<svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg> 
+27 						<svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg> 
+28 						<svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg> 
+29 					</div><!-- /progress-button --> 
+30 					<!-- progress button --> 
+31 		</div><!-- /container --> 
+32 		<script src="assets/js/classie.js"></script> 
+33 		<script src="assets/js/uiProgressButton.js"></script> 
+34 		<script> 
+35 			[].slice.call( document.querySelectorAll( '.progress-button' ) ).forEach( function( bttn, pos ) { 
+36 				new UIProgressButton( bttn, { 
+37 					callback : function( instance ) { 
+38 						var progress = 0, 
+39 							interval = setInterval( function() { 
+40 								progress = Math.min( progress + Math.random() * 0.1, 1 ); 
+41 								instance.setProgress( progress ); 
+42  
+43 								if( progress === 1 ) { 
+44 									instance.stop( pos === 1 || pos === 3 ? -1 : 1 ); 
+45 									clearInterval( interval ); 
+46 								} 
+47 							}, 150 ); 
+48 					} 
+49 				} ); 
+50 			} ); 
+51 		</script> 
+52 	</body> 
+53 </html> 
